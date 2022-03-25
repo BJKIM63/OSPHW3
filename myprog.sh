@@ -10,7 +10,7 @@ PS3="select anything you want: "
 select menu in "add" "sub" "div" "mul"
 do
 	if [ -n "$menu" ]; then
-	echo "---you select "$menu---""
+	echo "---you select "$menu""
 	break
 else
 	echo "---you must select the option---"
