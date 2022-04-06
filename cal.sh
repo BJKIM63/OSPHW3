@@ -26,18 +26,18 @@ fi
 
 echo
 
-num1=$(fileread "num1.txt")
-echo "num1: "$num1""
-num2=$(fileread "num2.txt")
-echo "num2: "$num2""
+declare -a Array
+Array+=($(fileread "num1.txt") $(fileread "num2.txt"))
+echo "num1: ${Array[0]}"
+echo "num2: ${Array[1]}"
 
 echo "op:"$op""
 
 case $op in
-	add) let result=$num1+$num2;;
-	sub) let result=$num1-$num2;;
-	div) let result=$num1/$num2;;
-	mul) let result=$num1*$num2;;
+	add) let result=${Array[0]}+${Array[1]};;
+	sub) let result=${Array[0]}-${Array[1]};;
+	div) let result=${Array[0]}/${Array[1]};;
+	mul) let result=${Array[0]}*${Array[1]};;
 esac
 
 echo "result: "$result""
