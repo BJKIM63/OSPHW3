@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "project management in github"
 
 function fileread(){
 while read file
